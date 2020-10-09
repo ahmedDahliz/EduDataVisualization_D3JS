@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Ahmed dahliz">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <style>
+        body {
+            background-color: #f7f7f7;
+        }
+        text {
+            font-weight: bold;
+            font-family: sans-serif;
+        }
+        .count {
+            fill: white;
+            font-size: 14px;
+        }
+        .chart-title {
+            font-size: 12px;
+        }
+        .justify-content-between > div {
+            width: 49%;
+        }
+        .row {
+            margin: 20px;
+        }
+    </style>
+    <title>Data visualization using D3.js</title>
+</head>
+<body> 
+    <div class="container-fluid">
+        <div class="row">
+            <div class="shadow d-flex flex-column border rounded bg-white">
+                <h1 class="p-3 text-center">Data visualization using D3.js</h1>
+                <p class="pl-3 pr-3 pt-2">
+                    This is a data visualization of an academic performance dataset (CSV format), that contain a bunch of information about student's absence, nationalities, educational stages, etc.                    <br>
+                    In total, this dataset contains 480 records with 17 attributes.
+                    <br>
+                    <a href="https://github.com/ahmedDahliz/EduDataVisualization_D3JS" target="_blank">Github repository.</a>
+                    <br><br>
+                    This visualization is as follows :
+                    <ul>
+                        <li><strong>Pie chart: </strong> Number of parent school satisfaction (good & bad).</li>
+                        <li><strong>Donut chart: </strong> Number of times the student visits a course content by educational stage.</li>
+                        <li><strong>Stacked bar chart: </strong> Number of absences (under 7 days and above 7 days) by educational stage.</li>
+                        <li><strong>Horizontal lollipop chart: </strong> Number of students by nationality.</li>
+                        <li><strong>Bar chart: </strong> Number of raised hands per topic.</li>
+                    </ul>
+                    <br>
+                </p>
+                <h3 class="pt-3 pl-3 pr-3">About the dataset</h3>
+                <p class="pl-3 pr-3 pt-2">
+                    <strong>Students Academic Performance Dataset</strong> is an educational data set which is collected from learning management system (LMS) called Kalboard 360. Kalboard 360 is a multi-agent LMS,
+                    which has been designed to facilitate learning through the use of leading-edge technology. 
+                    <br>
+                    Such system provides users with a synchronous access to educational resources from any device with Internet connection.
+                    <br> <a href="https://www.kaggle.com/aljarah/xAPI-Edu-Data" target="_blank">Source and more about the dataset</a>.
+                </p>
+                </h3>
+            </div>
+        </div>
+        <div class="row d-flex justify-content-between">
+            <div class="shadow pie1"></div>
+            <div class="shadow pie2"></div>
+        </div>
+        <div class="row d-flex justify-content-between">
+            <div class="shadow bar1" ></div>
+            <div class="shadow bar2" ></div>
+        </div>
+        <div class="row d-flex flex-column">
+            <div class="shadow bar3" ></div>
+        </div>
+    </div>
+    <div class="text-center m-3">
+        <small class="w-100"> <a href="https://github.com/ahmedDahliz/EduDataVisualization_D3JS" target="_blank">By Ahmed Dahliz</a></small>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
