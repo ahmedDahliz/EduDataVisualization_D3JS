@@ -25,7 +25,7 @@ function pieChart(data){
   let sections = svg.append('g').attr('transform', 'translate(250, 180)').selectAll('path').data(pieData);
   sections.enter().append('path').transition().duration(2000)
   .attrTween("d", function(d){
-    var i = d3.interpolate({startAngle: 1.1*Math.PI, endAngle: 1.1*Math.PI}, d);
+    var i = d3.interpolate({startAngle: 0*Math.PI, endAngle: 0*Math.PI}, d);
     return function(t) { return segments(i(t)); };
   }).attr('fill', function(d){
       return color(d.data.count)
@@ -88,7 +88,7 @@ function donutChart(data){
   let sections = svg.append('g').attr('transform', 'translate(250, 180)').selectAll('path').data(donutData);
   sections.enter().append('path').transition().duration(2000)
   .attrTween("d", function(d){
-    var i = d3.interpolate({startAngle: 1.1*Math.PI, endAngle: 1.1*Math.PI}, d);
+    var i = d3.interpolate({startAngle: 0, endAngle: 0}, d);
     return function(t) { return segments(i(t)); };
   }).attr('fill', function(d){
       return colors(d.data.count)
