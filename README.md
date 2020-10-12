@@ -1,7 +1,7 @@
 # Data visualization using <a href="https://d3js.org/">D3.js</a>
 
 ## Configuration
-Got the repository and run a local server using python CLI
+Go to the project folder and run a local server using python CLI
 
 <code>python -m SimpleHTTPServer 8888 & </code>
 
